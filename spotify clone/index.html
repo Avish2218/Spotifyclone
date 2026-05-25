@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify — Web Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Circular+Std:wght@400;500;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- ══════════════ SIDEBAR ══════════════ -->
+    <aside class="sidebar">
+
+      <!-- Logo -->
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="#1DB954" width="34" height="34">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.516 17.307a.75.75 0 01-1.032.244c-2.826-1.726-6.38-2.117-10.567-1.16a.75.75 0 01-.334-1.463c4.583-1.046 8.516-.596 11.69 1.347a.75.75 0 01.243 1.032zm1.472-3.27a.937.937 0 01-1.29.308C14.83 12.344 10.78 11.75 7.172 12.76a.937.937 0 01-.484-1.81c4.094-1.094 8.586-.563 11.993 1.597a.937.937 0 01.307 1.29zm.127-3.403C15.468 8.38 10.335 8.21 7.102 9.174a1.125 1.125 0 11-.653-2.154c3.72-1.127 9.388-.91 13.092 1.28a1.125 1.125 0 01-1.126 1.334z"/>
+        </svg>
+        <span>Spotify</span>
+      </div>
+
+      <!-- Nav -->
+      <nav class="nav">
+        <a href="#" class="nav-link active">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+        </a>
+      </nav>
+
+      <!-- Library -->
+      <div class="library">
+        <div class="library-header">
+          <div class="library-title">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Your Library</span>
+          </div>
+          <div class="library-actions">
+            <button class="icon-btn" title="Create playlist"><i class="fa-solid fa-plus"></i></button>
+            <button class="icon-btn" title="Show more"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="promo-card">
+          <p class="promo-title">Create your first playlist</p>
+          <p class="promo-sub">It's easy, we'll help you</p>
+          <button class="pill-btn">Create playlist</button>
+        </div>
+
+        <div class="promo-card">
+          <p class="promo-title">Let's find some podcasts to follow</p>
+          <p class="promo-sub">We'll keep you updated on new episodes</p>
+          <button class="pill-btn">Browse podcasts</button>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ══════════════ MAIN CONTENT ══════════════ -->
+    <main class="main-content">
+
+      <!-- Sticky top nav -->
+      <div class="top-nav">
+        <div class="top-nav-arrows">
+          <button class="arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="arrow-btn faded"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="top-nav-right">
+          <button class="pill-btn outline hide-sm">Explore Premium</button>
+          <button class="pill-btn dark"><i class="fa-solid fa-arrow-down"></i> Install App</button>
+          <button class="avatar-btn"><i class="fa-regular fa-user"></i></button>
+        </div>
+      </div>
+
+      <!-- Greeting -->
+      <section class="greeting-section">
+        <h1 class="greeting">Good evening</h1>
+        <div class="quick-picks">
+          <div class="quick-card">
+            <div class="quick-card-art" style="background:linear-gradient(135deg,#4a0080,#1DB954)">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <span>Liked Songs</span>
+            <button class="play-fab"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="quick-card">
+            <div class="quick-card-art" style="background:linear-gradient(135deg,#c62828,#ff6f00)">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <span>Top 50 – Global</span>
+            <button class="play-fab"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="quick-card">
+            <div class="quick-card-art" style="background:linear-gradient(135deg,#1565c0,#00acc1)">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <span>Trending India</span>
+            <button class="play-fab"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="quick-card">
+            <div class="quick-card-art" style="background:linear-gradient(135deg,#2e7d32,#f9a825)">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span>Daily Mix 1</span>
+            <button class="play-fab"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="quick-card">
+            <div class="quick-card-art" style="background:linear-gradient(135deg,#6a1b9a,#ad1457)">
+              <i class="fa-solid fa-headphones"></i>
+            </div>
+            <span>Chill Hits</span>
+            <button class="play-fab"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="quick-card">
+            <div class="quick-card-art" style="background:linear-gradient(135deg,#37474f,#78909c)">
+              <i class="fa-solid fa-record-vinyl"></i>
+            </div>
+            <span>Radio Hits</span>
+            <button class="play-fab"><i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recently Played -->
+      <section class="shelf">
+        <div class="shelf-header">
+          <h2>Recently Played</h2>
+          <a href="#" class="see-all">Show all</a>
+        </div>
+        <div class="cards-row">
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#c62828,#ff6f00)">
+              <i class="fa-solid fa-fire fa-2x"></i>
+            </div>
+            <p class="card-title">Top 50 – Global</p>
+            <p class="card-info">Your daily updates of the most played tracks right now</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#1565c0,#00bcd4)">
+              <i class="fa-solid fa-bolt fa-2x"></i>
+            </div>
+            <p class="card-title">Top Songs – India</p>
+            <p class="card-info">The most streamed tracks across the country today</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#2e7d32,#a5d6a7)">
+              <i class="fa-solid fa-seedling fa-2x"></i>
+            </div>
+            <p class="card-title">Chill Vibes</p>
+            <p class="card-info">Easy listening for lazy afternoons</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#6a1b9a,#e91e63)">
+              <i class="fa-solid fa-star fa-2x"></i>
+            </div>
+            <p class="card-title">Viral 50</p>
+            <p class="card-info">The biggest viral tracks on Spotify</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#e65100,#ffd54f)">
+              <i class="fa-solid fa-sun fa-2x"></i>
+            </div>
+            <p class="card-title">Morning Energy</p>
+            <p class="card-info">Power up your morning with these hits</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trending near you -->
+      <section class="shelf">
+        <div class="shelf-header">
+          <h2>Trending Near You</h2>
+          <a href="#" class="see-all">Show all</a>
+        </div>
+        <div class="cards-row">
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#4a0080,#1DB954)">
+              <i class="fa-solid fa-music fa-2x"></i>
+            </div>
+            <p class="card-title">Bollywood Bangers</p>
+            <p class="card-info">Hit songs straight from Bollywood</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#880e4f,#f06292)">
+              <i class="fa-solid fa-heart fa-2x"></i>
+            </div>
+            <p class="card-title">Romantic Hits</p>
+            <p class="card-info">Love is in the air with these melodies</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#01579b,#00e5ff)">
+              <i class="fa-solid fa-wave-square fa-2x"></i>
+            </div>
+            <p class="card-title">EDM Rave</p>
+            <p class="card-info">Drop the bass and feel the energy</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#33691e,#dce775)">
+              <i class="fa-solid fa-leaf fa-2x"></i>
+            </div>
+            <p class="card-title">Indie Folk</p>
+            <p class="card-info">Soulful acoustic sessions</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#212121,#757575)">
+              <i class="fa-solid fa-microphone fa-2x"></i>
+            </div>
+            <p class="card-title">Hip-Hop Essentials</p>
+            <p class="card-info">The culture, the bars, the beats</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Charts -->
+      <section class="shelf">
+        <div class="shelf-header">
+          <h2>Featured Charts</h2>
+          <a href="#" class="see-all">Show all</a>
+        </div>
+        <div class="cards-row">
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#c62828,#ff6f00)">
+              <i class="fa-solid fa-fire-flame-curved fa-2x"></i>
+            </div>
+            <p class="card-title">Top 50 – Global</p>
+            <p class="card-info">Your daily updates of the most played tracks globally</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#0d47a1,#42a5f5)">
+              <i class="fa-solid fa-globe fa-2x"></i>
+            </div>
+            <p class="card-title">Top Songs – India</p>
+            <p class="card-info">What India is listening to right now</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#1b5e20,#66bb6a)">
+              <i class="fa-solid fa-chart-bar fa-2x"></i>
+            </div>
+            <p class="card-title">Viral 50 – India</p>
+            <p class="card-info">Catch the viral wave before everyone else</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#4a148c,#9c27b0)">
+              <i class="fa-solid fa-podcast fa-2x"></i>
+            </div>
+            <p class="card-title">New Music Friday</p>
+            <p class="card-info">The freshest new releases every week</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card" data-playing="false">
+            <div class="card-thumb" style="background:linear-gradient(135deg,#bf360c,#ffca28)">
+              <i class="fa-solid fa-trophy fa-2x"></i>
+            </div>
+            <p class="card-title">Mega Hits</p>
+            <p class="card-info">The biggest songs of all time</p>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-links">
+          <a href="#">Legal</a>
+          <a href="#">Privacy Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+          <a href="#">About Ads</a>
+          <a href="#">Accessibility</a>
+        </div>
+        <p class="footer-copy">© 2025 Spotify AB</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ══════════════ MUSIC PLAYER ══════════════ -->
+  <div class="music-player">
+
+    <!-- Now Playing -->
+    <div class="now-playing">
+      <div class="np-art" id="npArt">
+        <i class="fa-solid fa-music"></i>
+      </div>
+      <div class="np-info">
+        <p class="np-title" id="npTitle">—</p>
+        <p class="np-artist" id="npArtist">Select a track</p>
+      </div>
+      <button class="icon-btn heart-btn"><i class="fa-regular fa-heart"></i></button>
+    </div>
+
+    <!-- Controls -->
+    <div class="player-center">
+      <div class="player-controls">
+        <button class="ctrl-btn" title="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+        <button class="ctrl-btn" title="Previous"><i class="fa-solid fa-backward-step"></i></button>
+        <button class="ctrl-btn play-pause-btn" id="playPauseBtn" title="Play/Pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="ctrl-btn" title="Next"><i class="fa-solid fa-forward-step"></i></button>
+        <button class="ctrl-btn" title="Repeat"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+      <div class="progress-row">
+        <span class="time" id="currTime">0:00</span>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+          <input type="range" class="progress-slider" id="progressSlider" min="0" max="100" value="0" />
+        </div>
+        <span class="time" id="totalTime">3:33</span>
+      </div>
+    </div>
+
+    <!-- Volume -->
+    <div class="player-right">
+      <button class="icon-btn"><i class="fa-solid fa-list"></i></button>
+      <button class="icon-btn"><i class="fa-regular fa-window-restore"></i></button>
+      <button class="icon-btn"><i class="fa-solid fa-volume-high"></i></button>
+      <input type="range" class="volume-slider" min="0" max="100" value="70" id="volumeSlider" />
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
